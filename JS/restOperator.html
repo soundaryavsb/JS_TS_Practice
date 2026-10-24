@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Rest operator in Array
+        let person1=["Arya","Lila"];
+        let person2=["Raya","Meena"];
+        let person3=[...person1,...person2];
+        console.log(person3);
+        let [a,b,...remainingPeople]=person3; //Rest Operator
+        console.log(remainingPeople);
+        
+        //Rest operator in Object
+        let personDetails1={
+            name:"Arya",
+            age:56
+        }
+        let personDetails2={
+            city:"Chennai",
+            state:"TamilNadu"
+        }
+        let personDetails={...personDetails1,...personDetails2};
+        console.log(personDetails);
+
+        let {name,age,...address}=personDetails; //Rest operator
+        console.log(address);
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Spread operator in Array
+        let person1=["Arya","Lila"];
+        let person2=["Raya","Meena"];
+        let person3=[...person1,...person2];
+        console.log(person3);
+        //Spread operator in Object
+        let personDeatils1={
+            name:"Arya",
+            age:56
+        }
+        let personDeatils2={
+            city:"Chennai",
+            state:"TamilNadu"
+        }
+        let personDeatils={...personDeatils1,...personDeatils2};
+        console.log(personDeatils);
+        
+    </script>
+</body>
+</html>
