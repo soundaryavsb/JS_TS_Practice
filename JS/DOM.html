@@ -6,9 +6,11 @@
     <title>DOM Document</title>
 </head>
 <body>
+    <div id="parent">
     <h1 id="demo" class="name">Soundarya</h1>
     <h1 id="iniyaa">Iniyaa</h1>
-    <h2 class="name"> Ready</h2>
+    <h2 id="ready" class="name"> Ready</h2>
+    </div>
     <script>
         //DOM methods
         console.log(document.getElementById('demo'));
@@ -20,6 +22,26 @@
         console.log(document.body);
         console.log(document.head);
         console.log(document.title);
+        //DOM manipulation
+        //1. create an element
+        let n=document.createElement("h1");
+        n.innerText="Udhayaa";//2. add text
+        //3. add element
+        let parent=document.getElementById("parent");
+        parent.appendChild(n);
+        //4. remove
+        let m=document.createElement("h2");
+        m.innerText="Thanvik";
+        parent.appendChild(m);
+        let k=document.createElement("h3");
+        k.innerText="Joshna";
+        parent.appendChild(k);
+        let p=document.getElementById("ready");
+        p.remove();
+        //5. insert
+        parent.insertBefore(k,m);
+        //6. replacing
+        m.replaceChildren(n);
     </script>
 </body>
 </html>
