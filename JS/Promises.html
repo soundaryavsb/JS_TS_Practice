@@ -7,7 +7,27 @@
 </head>
 <body>
     <script>
-        
+        //promises
+        // 1. Resolve/fulfill - then - finally
+        // 2. Reject - catch - finally
+        // 3. pending 
+        let mark=85;
+        let myPromise=new Promise((resolve,reject)=>{
+            if(mark>=90){
+                resolve();
+            }
+            else{
+                reject();
+            }
+        });
+        myPromise.then((resolve)=>{
+            console.log("You will get a bike");
+        }).catch((reject)=>{
+            console.log("Better luck next time");
+            
+        }).finally(()=>{
+            console.log("Give your best for your next exam");
+        })
     </script>
 </body>
 </html>
