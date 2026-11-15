@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Async and Await used instead of promises. It is used for asynchronous operations.
+        //both should be used together, Async is function and await is keyword
+        //try, catch, finally used.
+        let marks=95;
+        let mypromises=new Promise((resolve,reject)=>{
+              if(mark>=90){
+                resolve("Hello");
+            }
+            else{
+                reject("Hi");
+            }
+        });
+        async function demo() {
+            try {
+                let result=await mypromises;
+                console.log(result);
+                
+            } catch {
+                
+            }finally{
+                console.log("I am finally block");
+                
+            }
+        }
+        demo();
+        console.log("Step 1");
+        setTimeout(() => {
+        console.log("Step 2");    
+        }, 2000);
+        console.log("Step 3");
+        
+        
+    </script>
+</body>
+</html>
